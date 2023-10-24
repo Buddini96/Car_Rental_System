@@ -4,13 +4,15 @@ html body{
 
 #header{
     box-shadow: 0 4px 10px -3px rgba(183, 174, 174, 0.34);
-    background: #3c6279;
+    /*background: #3c6279;*/
+    background-color: transparent;
 }
 
 .navbar{
     height: 70px;
     box-shadow: 0 4px 10px -3px rgba(183, 174, 174, 0.34);
-    background: #3c6279;
+    /*background: #3c6279;*/
+    background-color: transparent;
     overflow: hidden;
 }
 
