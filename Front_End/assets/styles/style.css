@@ -20,12 +20,24 @@ html body{
     box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
 }
 
-.navbar li{
+#navbarDropdown{
+    background-color: transparent;
+
+}
+
+.dropdown-menu{
+    background-color: transparent;
+
+}
+
+.navbar li {
     font-size: 15px;
     padding: 0px;
     text-transform: uppercase;
     justify-content: space-around;
+
 }
+
 
 .navbar li .nav-link{
     color: white;
