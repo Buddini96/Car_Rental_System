@@ -1,8 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html body{
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar-thumb {
+    background: #385765;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+
 #header{
+    box-shadow: 0 4px 10px -3px rgba(183, 174, 174, 0.34);
+    background: #3c6279;
+
+}
+
+#headerIndex{
     box-shadow: 0 4px 10px -3px rgba(183, 174, 174, 0.34);
     /*background: #3c6279;*/
     background-color: transparent;
@@ -56,3 +76,19 @@ html body{
 .home{
     background: url("assets/img/car2.jpg");
 }
+
+.adminContent #v-tabs-dash-tab, #v-tabs-car-tab, #v-tabs-customer-tab, #v-tabs-driver-tab, #v-tabs-rentals-tab, #v-tabs-payment-tab, #v-tabs-request-tab,
+#v-tabs-profile-tab, #v-tabs-setting-tab, #v-tabs-rentalreturns-tab, #v-tabs-maintenance-tab, #v-tabs-income-tab {
+    padding: 25px;
+    font-size: 20px;
+    text-shadow: #c7c7c7 5px 5px 5px;
+
+}
+
+#v-tabs-dash > div > h1, #v-tabs-car > div > h1, #v-tabs-customer > div > h1, #v-tabs-driver > div > h1, #v-tabs-order > div > h1, #v-tabs-payment > div > h1, #v-tabs-request > div > h1,
+#v-tabs-profile > div > h1, #v-tabs-setting > div > h1, #v-tabs-bookingreturn > div > h1, #v-tabs-maintaince > div > h1 {
+    text-shadow: #c0c0c0 5px 5px 5px;
+}
+
+
+
