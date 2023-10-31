@@ -28,4 +28,5 @@ public class Driver {
     private String username;
     private String password;
     private boolean availability;
+
 }

@@ -99,7 +99,7 @@ public class CustomerController {
     MultipartFile licenceImg, @PathVariable String id) {
         try {
             String projectPath = String.valueOf(new File("assets/img"));
-            File uploadsDir = new File(projectPath + "/Customers");
+            File uploadsDir = new File(projectPath + "D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages");
             uploadsDir.mkdir();
 
             nicf.transferTo(new File(uploadsDir.getAbsolutePath() + "//" + nicf.getOriginalFilename()));
