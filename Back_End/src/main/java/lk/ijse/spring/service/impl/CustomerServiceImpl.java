@@ -34,7 +34,6 @@ public class CustomerServiceImpl implements CustomerService {
         } else {
             throw new RuntimeException("Customer Already Exists");
         }
-
     }
 
     @Override
@@ -70,6 +69,8 @@ public class CustomerServiceImpl implements CustomerService {
         }.getType());
     }
 
+
+    //REPO
     @Override
     public boolean findCustomerByUsername(String username) {
         return repo.findCustomerByUsername(username).isPresent();

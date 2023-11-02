@@ -49,3 +49,4 @@ public interface CustomerRepo extends JpaRepository<Customer, String> {
     @Query(value = "UPDATE Customer SET name=:name,address=:address,email=:email,contactNo=:contactNo,nicNo=:nicNo,licenceNo=:licenceNo WHERE customerId=:customerId", nativeQuery = true)
     void updateCustomer(@Param("customerId") String customerId, @Param("name") String name, @Param("address") String address, @Param("email") String email, @Param("contactNo") int contactNo, @Param("nicNo") String nicNo, @Param("licenceNo") String licenceNo);
 }
+

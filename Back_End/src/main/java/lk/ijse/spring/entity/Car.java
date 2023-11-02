@@ -10,8 +10,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,7 +24,7 @@ import javax.persistence.Id;
 @Entity
 public class Car {
     @Id
-    private String registrationNO;
+    private String registrationNO; //car no plate
     private String brand;
     private String type;
     private int noOfPassengers;
@@ -39,4 +43,11 @@ public class Car {
     private double priceForExtraKm;
     private double completeKm;
     private String status;
+
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
+    private List<CarRent> rentals = new ArrayList<>();
+
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
+    private List<Maintenance> maintenances = new ArrayList<>();
+
 }

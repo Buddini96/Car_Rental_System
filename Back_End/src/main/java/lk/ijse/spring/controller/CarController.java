@@ -105,7 +105,6 @@ public class CarController {
     public ResponseUtil getCarRegistrationNoByType(@PathVariable String type) {
         return new ResponseUtil(200, "Ok", service.getCarRegistrationNumbersByType(type));
     }
-
 }
 
 

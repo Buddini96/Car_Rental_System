@@ -27,6 +27,7 @@ public class DriverServiceImpl implements DriverService {
     @Autowired
     ModelMapper mapper;
 
+
     @Override
     public void saveDriver(DriverDTO dto) {
         if (!repo.existsById(dto.getLicenceNo())) {
@@ -84,6 +85,8 @@ public class DriverServiceImpl implements DriverService {
         return mapper.map(repo.findDriverByUsernameAndPassword(username, password).get(), DriverDTO.class);
     }
 
+
+    //REPO
     @Override
     public void updateDriverNonAvailable(String licenceNo) {
         if (repo.existsById(licenceNo)) {
@@ -124,4 +127,5 @@ public class DriverServiceImpl implements DriverService {
         return mapper.map(repo.getRandomDriver(), new TypeToken<List<DriverDTO>>() {
         }.getType());
     }
+
 }

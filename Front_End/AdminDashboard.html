@@ -47,14 +47,12 @@
   </section>
 </header>
 
-<!--------------------------Main Section----------------------->
+<!--Main Section-->
 <main class="adminContent container-fluid">
-
   <div class="row">
 
     <!--Side Links-->
     <div class="col-2" id="leftDash">
-
       <div class="nav flex-column nav-tabs text-lg-start overflow-hidden" id="v-tabs-tab" role="tablist"
            aria-orientation="vertical">
         <a class="nav-link active" id="v-tabs-dash-tab" data-mdb-toggle="tab" href="#v-tabs-dash" role="tab"
@@ -68,7 +66,7 @@
           <i class="fas fa-user"></i> Customers</a>
         <a class="nav-link" id="v-tabs-driver-tab" data-mdb-toggle="tab" href="#v-tabs-driver" role="tab"
            aria-controls="v-tabs-driver" aria-selected="false">
-          <i class="fa fa-solid fa-users"></i> Drivers</a>
+          <i class="fas fa-user"></i> Drivers</a>
         <a class="nav-link" id="v-tabs-rentals-tab" data-mdb-toggle="tab" href="#v-tabs-rentals" role="tab"
            aria-controls="v-tabs-rentals" aria-selected="false" id="adminOrdTab">
           <i class="fas fa-list-ul"></i> Car Rentals</a>
@@ -90,30 +88,121 @@
            role="tab"
            aria-controls="v-tabs-income" aria-selected="false">
           <i class="fas fa-chart-line"></i> Income Reports</a>
-      </div>
 
+      </div>
     </div>
 
-    <!--Dashboard-->
+
     <div class="col-10 p-3">
-
       <div class="container-fluid">
-
         <div class="tab-content" id="v-tabs-tabContent">
 
-          <!--Dashboard Details-->
+          <!--DashBoard Details-->
           <div class="tab-pane fade show active" id="v-tabs-dash" role="tabpanel"
                aria-labelledby="v-tabs-dash-tab">
-
             <div class="row text-center"><h1 class="h1 display-5">DashBoard</h1></div>
+            <div class="row p-3">
+              <div class="col-lg-3 col-6 overflow-hidden " id="c1">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-user"></i>
+                      REGISTERED CUSTOMERS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countCust">00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c2">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-list"></i>
+                      TODAY BOOKINGS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countBookings">00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c3">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-car"></i>
+                      AVAILABLE CARS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countAvailableCars">
+                      00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c4">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-car"></i>
+                      RESERVED CARS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countReservedCars">
+                      00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row p-3">
+              <div class="col-lg-6 col-6 overflow-hidden " id="c5">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="far fa-user"></i>
+                      AVAILABLE DRIVERS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center"
+                        id="countAvailableDrivers">00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c6">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="far fa-user"></i>
+                      OCCUPIED DRIVERS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countOccupiedDrivers">
+                      00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="row mt-1 justify-content-around">
+              <div class="col-12 p-3 mt-3">
+                <h3 class="text-center p-2">Today Bookings</h3>
+                <div class="bg-light row overflow-scroll" style="height: 40vh">
+                  <table class="table table-hover table-bordered table-striped" id="bookingTbl">
+                    <thead class="bg-primary">
+                    <tr class="text-white">
+                      <th>Rent ID</th>
+                      <th>Date</th>
+                      <th>Pick Up Date</th>
+                      <th>Return Date</th>
+                      <th>Customer ID</th>
+                      <th>Car Registration No</th>
+                      <th>Driver Licence No</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody id="todayBookingTable">
+
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
           </div>
+
 
           <!--Car Details-->
           <div class="tab-pane fade" id="v-tabs-car" role="tabpanel" aria-labelledby="v-tabs-car-tab">
             <div class="row ms-0 me-0 text-center"><h1 class="h1 display-5">Car Details</h1></div>
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-0 text-white" style="background-color: #273d4b">Car Details</h3>
+              <h3 class="h3  p-2 m-1 bg-info text-white">Car Details</h3>
               <div class="col-2">
                 <div class="mb-3">
                   <label for="txtRegNo" class="form-label mb-0">Registration No</label>
@@ -272,7 +361,7 @@
                 <div class="col-2">
                   <input type="text" id="searchCar" class="form-control" placeholder="Search Reg No"/>
                 </div>
-                <button type="button" class="btn" style="background-color: #273d4b; color: white" id="btnSearchCar">
+                <button type="button" class="btn btn-primary" id="btnSearchCar">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
@@ -280,7 +369,7 @@
 
             <div class="row overflow-scroll mt-2" style="height: 60vh">
               <table class="table table-hover table-bordered table-striped" id="carTbl">
-                <thead class="" style="background-color: #273d4b; height: 1vh; font-size: 15px">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Reg No</th>
                   <th>Brand</th>
@@ -305,18 +394,14 @@
               </table>
 
             </div>
-
           </div>
 
           <!--Customer Details-->
           <div class="tab-pane fade" id="v-tabs-customer" role="tabpanel"
                aria-labelledby="v-tabs-customer-tab">
-
             <div class="row text-center"><h1 class="h1 display-5">Customer Details</h1></div>
-
-            <!--Customer Details Content-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b;">Customer Details</h3>
+              <h3 class="h3  p-2 m-3 bg-info text-white">Customer Details</h3>
               <div class="col-2">
                 <div class="mb-3">
                   <label for="txtCustomerId" class="form-label mb-0">Customer ID</label>
@@ -360,8 +445,6 @@
                 </div>
               </div>
             </div>
-
-            <!--Second Row-->
             <div class="row ms-0 me-0">
               <div class="col-2">
                 <div class="mb-3">
@@ -373,19 +456,19 @@
               </div>
               <div class="col-2">
                 <label class="form-label mb-0">NIC Front View</label>
-                <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #273d4b 2px solid">
+                <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #00e5ff 2px solid">
 
                 </div>
               </div>
               <div class="col-2">
                 <label class="form-label mb-0">NIC Back View</label>
-                <div class="mb-3" id="divNICBackView" style="height: 13vh; border: #273d4b 2px solid">
+                <div class="mb-3" id="divNICBackView" style="height: 13vh; border: #00e5ff 2px solid">
 
                 </div>
               </div>
               <div class="col-2">
                 <label class="form-label mb-0">Licence Img</label>
-                <div class="mb-3" id="divLicenceImg" style="height: 13vh; border: #273d4b 2px solid">
+                <div class="mb-3" id="divLicenceImg" style="height: 13vh; border: #00e5ff 2px solid">
 
                 </div>
               </div>
@@ -397,13 +480,12 @@
               </div>
             </div>
 
-            <!--Pending Customers-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b">Pending Customers</h3>
+              <h3 class="h3  p-2 bg-info text-white">Pending Customers</h3>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 20vh">
               <table class="table table-hover table-bordered table-striped" id="pendingCustomerTbl">
-                <thead class="" style="background-color: #273d4b">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Customer ID</th>
                   <th>Name</th>
@@ -421,23 +503,22 @@
               </table>
             </div>
 
-            <!--Registerd Customers-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b">Registered Customers</h3>
+              <h3 class="h3  p-2 bg-info text-white">Registered Customers</h3>
             </div>
             <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
               <div class="input-group d-flex align-items-center justify-content-center">
                 <div class="col-2">
                   <input type="text" id="searchCustomer" class="form-control" placeholder="Search"/>
                 </div>
-                <button type="button" class="btn" id="btnSearchCustomer" style="background-color: #273d4b">
-                  <i class="fas fa-search" style="color: white;"></i>
+                <button type="button" class="btn btn-primary" id="btnSearchCustomer">
+                  <i class="fas fa-search"></i>
                 </button>
               </div>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 40vh">
               <table class="table table-hover table-bordered table-striped" id="registeredCustomerTbl">
-                <thead class="" style="background-color: #273d4b">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Customer ID</th>
                   <th>Name</th>
@@ -454,17 +535,14 @@
                 </tbody>
               </table>
             </div>
-
           </div>
 
           <!--Driver Details-->
-          <div class="tab-pane fade" id="v-tabs-driver" role="tabpanel" aria-labelledby="v-tabs-customer-tab">
-
+          <div class="tab-pane fade" id="v-tabs-driver" role="tabpanel"
+               aria-labelledby="v-tabs-customer-tab">
             <div class="row text-center"><h1 class="h1 display-5">Driver Details</h1></div>
-
-            <!--Driver Details-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b;">Driver Details</h3>
+              <h3 class="h3  p-2 m-3 bg-info text-white">Driver Details</h3>
               <div class="col-3">
                 <div class="mb-3">
                   <label for="txtLicenceNo" class="form-label mb-0">Licence No</label>
@@ -483,7 +561,7 @@
                 <div class="mb-3">
                   <label for="txtDriverAddress" class="form-label mb-0">Address</label>
                   <input type="text" class="form-control" id="txtDriverAddress" name="driverAddress"
-                         placeholder="Eg:- Richmond hill road,Galle">
+                         placeholder="Eg:- Richmond hil road, Galle">
                 </div>
               </div>
               <div class="col-3">
@@ -494,8 +572,6 @@
                 </div>
               </div>
             </div>
-
-            <!--Second Row-->
             <div class="row ms-0 me-0">
               <div class="col-4">
                 <div class="mb-3">
@@ -519,7 +595,6 @@
                 </div>
               </div>
             </div>
-
             <div class="row m-3">
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-success mt-3 " id="btnSaveDriver">Save</button>
@@ -529,13 +604,12 @@
               </div>
             </div>
 
-            <!--Available drivers-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b;">Available Drivers</h3>
+              <h3 class="h3  p-2 bg-info text-white">Available Drivers</h3>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 30vh">
               <table class="table table-hover table-bordered table-striped" id="availableDriversTbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Licence No</th>
                   <th>Name</th>
@@ -551,13 +625,12 @@
               </table>
             </div>
 
-            <!--Non Available drivers-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b;">Non Available Drivers</h3>
+              <h3 class="h3  p-2 bg-info text-white">Non Available Drivers</h3>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 20vh">
               <table class="table table-hover table-bordered table-striped" id="NonAvailableDriversTbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Licence No</th>
                   <th>Name</th>
@@ -572,24 +645,22 @@
                 </tbody>
               </table>
             </div>
-
-            <!--Registerd Drivers-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-1 ms-0 me-0 text-white" style="background-color: #273d4b;">Registered Drivers</h3>
+              <h3 class="h3  p-2 bg-info text-white">Registered Drivers</h3>
             </div>
             <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
               <div class="input-group d-flex align-items-center justify-content-center">
                 <div class="col-2">
                   <input type="text" id="searchDriver" class="form-control" placeholder="Search"/>
                 </div>
-                <button type="button" class="btn" id="btnSearchDriver" style="background-color: #273d4b;">
-                  <i class="fas fa-search" style="color: white"></i>
+                <button type="button" class="btn btn-primary" id="btnSearchDriver">
+                  <i class="fas fa-search"></i>
                 </button>
               </div>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 40vh">
               <table class="table table-hover table-bordered table-striped" id="registeredDriversTbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Licence No</th>
                   <th>Name</th>
@@ -607,13 +678,12 @@
 
           </div>
 
-
           <!--Car Rentals-->
           <div class="tab-pane fade" id="v-tabs-rentals" role="tabpanel" aria-labelledby="v-tabs-rentals-tab">
             <div class="row text-center"><h1 class="h1 display-5">Car Rentals</h1></div>
             <div class="bg-light row overflow-scroll" style="height: 75vh">
               <table class="table table-hover table-bordered table-striped" id="carRentalsTbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Rent ID</th>
                   <th>Date</th>
@@ -633,7 +703,8 @@
           </div>
 
           <!--Payment Details-->
-          <div class="tab-pane fade" id="v-tabs-payment" role="tabpanel" aria-labelledby="v-tabs-payment-tab">
+          <div class="tab-pane fade" id="v-tabs-payment" role="tabpanel"
+               aria-labelledby="v-tabs-payment-tab">
             <div class="row text-center"><h1 class="h1 display-5">Payment Details</h1></div>
             <div class="row m-3">
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -647,14 +718,14 @@
                   <input type="date" id="pickToDate" class="form-control" name="toDate"
                          placeholder="End Date">
                 </div>
-                <button type="button" class="btn btn-success mt-3" id="btnSearchPayment">Search</button>
-                <button type="button" class="btn btn-danger mt-3 ms-2" id="btnClearDates">Clear
+                <button type="button" class="btn btn-primary mt-3" id="btnSearchPayment">Search</button>
+                <button type="button" class="btn btn-warning mt-3 ms-2" id="btnClearDates">Clear
                 </button>
               </div>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 65vh">
               <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Payment ID</th>
                   <th>Date</th>
@@ -671,7 +742,8 @@
           </div>
 
           <!--Rental Requests-->
-          <div class="tab-pane fade" id="v-tabs-request" role="tabpanel" aria-labelledby="v-tabs-request-tab">
+          <div class="tab-pane fade" id="v-tabs-request" role="tabpanel"
+               aria-labelledby="v-tabs-request-tab">
             <div class="row text-center"><h1 class="h1 display-5">Rental Requests</h1></div>
             <div class="row ms-0 me-0">
               <div class="col-3">
@@ -738,7 +810,7 @@
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-success mt-3 " id="btnRentalAccept">Accept</button>
                 <button type="button" class="btn btn-danger mt-3" id="btnRentalReject">Reject</button>
-                <button type="button" class="btn btn-warning mt-3" id="btnClearRental">Clear</button>
+                <button type="button" class="btn btn-secondary mt-3" id="btnClearRental">Clear</button>
               </div>
             </div>
             <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
@@ -747,14 +819,14 @@
                   <input type="text" id="searchRentalRequest" class="form-control"
                          placeholder="Search"/>
                 </div>
-                <button type="button" class="btn" style="background-color: #273d4b; color: white" id="btnSearchRentalRequest">
+                <button type="button" class="btn btn-primary" id="btnSearchRentalRequest">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
             </div>
             <div class="bg-light row overflow-scroll" style="height: 45vh">
               <table class="table table-hover table-bordered table-striped" id="carRentalRequestTbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Rent ID</th>
                   <th>Date</th>
@@ -771,6 +843,7 @@
                 </tbody>
               </table>
             </div>
+
           </div>
 
           <!--Rental Return-->
@@ -867,7 +940,7 @@
             <div class="row ms-0 me-0">
               <div class="col-3">
                 <div class="form-floating mb-3">
-                  <button type="button" class="btn btn-primary mt-3 " id="btnCalPayment">Calculate
+                  <button type="button" class="btn btn-warning mt-3 " id="btnCalPayment">Calculate
                     Payment
                   </button>
 
@@ -893,13 +966,13 @@
               <div class="col-3">
                 <button type="button" class="btn btn-success" id="btnSubmitPayment">Submit Payment
                 </button>
-                <button type="button" class="btn btn-danger" id="btnClearPayment">Clear</button>
+                <button type="button" class="btn btn-warning" id="btnClearPayment">Clear</button>
               </div>
             </div>
             <hr>
             <div class="bg-light row overflow-scroll" style="height: 40vh">
               <table class="table table-hover table-bordered table-striped" id="carRentaltbl">
-                <thead class="" style="background-color: #273d4b;">
+                <thead class="bg-primary">
                 <tr class="text-white">
                   <th>Rent ID</th>
                   <th>Date</th>
@@ -971,7 +1044,7 @@
                 <button type="button" class="btn btn-success" id="btnAddToMaintenance">Add To
                   Maintenance
                 </button>
-                <button type="button" class="btn btn-danger" id="btnClearMaintenance">Clear</button>
+                <button type="button" class="btn btn-warning" id="btnClearMaintenance">Clear</button>
               </div>
             </div>
             <hr>
@@ -1014,16 +1087,16 @@
               <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-3 d-flex align-items-center justify-content-evenly">
                   <button type="button" class="btn btn-success" id="btnMaintenancePaid">Paid</button>
-                  <button type="button" class="btn btn-danger" id="btnClearPaid">Clear</button>
+                  <button type="button" class="btn btn-warning" id="btnClearPaid">Clear</button>
                 </div>
               </div>
               <div class="row ms-0 me-0">
-                <h3 class="h3  p-2 mt-3 mb-3 text-white p-0" style="background-color: #273d4b;">Under Maintenance Cars</h3>
+                <h3 class="h3  p-2 mt-3 mb-3 bg-info text-white p-0">Under Maintenance Cars</h3>
               </div>
               <div class="bg-light row overflow-scroll m-0" style="height: 40vh">
                 <table class="table table-hover table-bordered table-striped"
                        id="carUnderMaintenanceTbl">
-                  <thead class="" style="background-color: #273d4b;">
+                  <thead class="bg-primary">
                   <tr class="text-white">
                     <th>Reg No</th>
                     <th>Brand</th>
@@ -1048,11 +1121,11 @@
                 </table>
               </div>
               <div class="row ms-0 me-0">
-                <h3 class="h3  p-2 mt-3 mb-3 text-white" style="background-color: #273d4b;">All Maintenances</h3>
+                <h3 class="h3  p-2 mt-3 mb-3 bg-info text-white">All Maintenances</h3>
               </div>
               <div class="bg-light row overflow-scroll m-0" style="height: 30vh">
                 <table class="table table-hover table-bordered table-striped" id="allMaintenancesTbl">
-                  <thead class="" style="background-color: #273d4b;">
+                  <thead class="bg-primary">
                   <tr class="text-white">
                     <th>Maintenance ID</th>
                     <th>Registration No</th>
@@ -1072,16 +1145,88 @@
           <!--Income Reports-->
           <div class="tab-pane fade" id="v-tabs-income" role="tabpanel" aria-labelledby="v-tabs-income-tab">
             <div class="row text-center"><h1 class="h1 display-5">Income Reports</h1></div>
+            <div class="row m-3">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <div>
+                  <label for="incomeFromDate" class="form-label">From</label>
+                  <input type="date" id="incomeFromDate" class="form-control" name="incomeFromDate"
+                         placeholder="Start Date">
+                </div>
+                <div>
+                  <label for="incomeToDate" class="form-label">To</label>
+                  <input type="date" id="incomeToDate" class="form-control" name="incomeToDate"
+                         placeholder="End Date">
+                </div>
+                <button type="button" class="btn btn-primary mt-3" id="btnSearchIncome">Search</button>
+                <button type="button" class="btn btn-warning mt-3" id="btnClearIncome">Clear</button>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 m-3 text-dark text-center">Payments</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 40vh">
+              <table class="table table-hover table-bordered table-striped" id="paymentsInDateRangeTbl">
+                <thead class="bg-dark text-white">
+                <tr>
+                  <th>Payment ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Rent ID</th>
+                  <th>Customer ID</th>
+                </tr>
+                </thead>
+                <tbody id="tblPaymentsInDateRange">
 
+                </tbody>
+              </table>
+            </div>
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 m-3 text-dark text-center">Maintenances</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 30vh">
+              <table class="table table-hover table-bordered table-striped"
+                     id="maintenancesInDateRangeTbl">
+                <thead class="bg-dark text-white">
+                <tr>
+                  <th>Maintenance ID</th>
+                  <th>Date</th>
+                  <th>Cost</th>
+                  <th>Details</th>
+                  <th>Registration No</th>
+                </tr>
+                </thead>
+                <tbody id="tblMaintenancesInDateRange">
+
+                </tbody>
+              </table>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-8">
+                <label class="h4 text-primary">Total Income = </label>
+                <label class="h4 text-dark">Total Payments - </label>
+                <label class="h4 text-dark">Total Maintenances Cost</label>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-6">
+                <label class="h4 text-primary">Total Income = </label>
+                <label class="h4 text-danger" id="lblTotalPayments"></label>
+                <label class="h4 text-danger"> - </label>
+                <label class="h4 text-danger" id="lblTotalMaintenanceCost"></label>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-6">
+                <label class="h4 text-primary">Total Income = </label>
+                <label class="h4 text-danger">Rs. </label>
+                <label class="h4 text-danger" id="lblTotalIncome"></label>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </main>
 
 <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>

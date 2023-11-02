@@ -22,6 +22,7 @@ public class AdminController {
 
     @GetMapping
     public ResponseUtil getAllAdmins() {
+
         return new ResponseUtil(200, "Ok", service.getAllAdmins());
     }
 

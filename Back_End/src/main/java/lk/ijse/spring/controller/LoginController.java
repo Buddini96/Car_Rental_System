@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/login")
 @CrossOrigin
 public class LoginController {
-
     @Autowired
     LoginService service;
 
@@ -35,5 +34,4 @@ public class LoginController {
     public ResponseUtil generateLogId(){
         return new ResponseUtil(200,"ok",service.generateLoginId());
     }
-
 }

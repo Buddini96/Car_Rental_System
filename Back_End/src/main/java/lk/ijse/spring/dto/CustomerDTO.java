@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Data
 @ToString
 public class CustomerDTO {
-    private  String customerId;
+    private String customerId;
     private String name;
     private String address;
     private int contactNo;

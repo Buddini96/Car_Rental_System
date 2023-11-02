@@ -21,6 +21,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Autowired
     LoginRepo repo;
+
     @Autowired
     ModelMapper mapper;
 
@@ -59,6 +60,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public String getLastLoginId() {
+
         return repo.getLastLoginId();
     }
 
