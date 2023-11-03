@@ -9,7 +9,7 @@ let regNicNo = /^[0-9]{9}(V)|[0-9]{12}$/;
 
 let baseUrl = "http://localhost:8080/Back_End_war/";
 
-/*-------------------block tab key--------------------*/
+//block tab key
 $('#txtUserName,#txtPassword,#inputName,#inputContactNo,#inputAddress,#inputEmail,#inputDrivingLicence,#inputNIC,#inputUserName,#inputPassword,#inputfile1,#inputfile2,#inputfile3').on('keydown', function (event) {
     if (event.key == "Tab") {
         event.preventDefault();
@@ -20,7 +20,7 @@ $('#txtUserName,#txtPassword').on('blur', function () {
     addLoginFormValidation();
 });
 
-/*--------------Check Login validation-----------------*/
+//Check Login validation
 function addLoginFormValidation() {
     var username = $("#txtUserName").val();
     if (regLoginUsername.test(username)) {
@@ -70,7 +70,7 @@ $('#cmbUserType').change(function () {
     }
 });
 
-/*-----------------disable sign in btn until fields fill---------------------*/
+// disable sign in btn until fields fill
 function setLoginButtonDisableOrNot() {
     let check = addLoginFormValidation();
     var type = $("#cmbUserType").find('option:selected').text();
@@ -82,7 +82,7 @@ function setLoginButtonDisableOrNot() {
 }
 
 
-/*-------------------check username and pass valid to unlock sign in btn--------------------*/
+// check username and pass valid to unlock sign in btn
 function checkIfLoginUserFormValid() {
     var username = $('#txtUserName').val();
     if (regLoginUsername.test(username)) {
@@ -101,7 +101,7 @@ function checkIfLoginUserFormValid() {
 }
 
 
-/*---------------------check which user select--------------------*/
+// check which user select
 $('#inputUserType').change(function () {
     var userType = $('#inputUserType').find('option:selected').text();
     if (userType === "Admin") {
@@ -150,7 +150,7 @@ function disableAllComponents() {
     $('#txtId').val("");
 }
 
-/*----------------generate Admin IDs------------------*/
+// generate Admin IDs
 function generateAdminId() {
     $.ajax({
         url: baseUrl + "api/v1/admin/generateAdminID",
@@ -162,7 +162,7 @@ function generateAdminId() {
 }
 
 
-/*-------------------generate Customer IDs-----------------*/
+// generate Customer IDs
 function generateCustomerId() {
     $.ajax({
         url: baseUrl + "api/v1/customer/generateCustomerId",
@@ -181,8 +181,8 @@ $('#inputName,#inputAddress,#inputContactNo,#inputNIC,#inputDrivingLicence,#inpu
 });
 
 
-/*------------SIGN UP------------------------------------*/
-/*------------------------signup validation-------------------*/
+//------------SIGN UP------------------------------------
+// signup validation
 function checkIfSignUpUserFormValid() {
     var name = $('#inputName').val();
     if (regName.test(name)) {
@@ -263,7 +263,7 @@ function checkIfSignUpUserFormValid() {
 }
 
 
-/*-------------------check input name------------------------*/
+// check input name
 $('#inputName').on('keyup', function () {
     checkInputName();
 })
@@ -280,13 +280,13 @@ function checkInputName() {
     }
 }
 
-/*------------------check contact no----------------*/
+// check contact no
 $('#inputContactNo').on('keyup', function () {
     checkInputContactNo();
 })
 
 
-/*--------------function for check contact no validation------------------------*/
+// function for check contact no validation
 function checkInputContactNo() {
     var contactNo = $('#inputContactNo').val();
     if (regContactNo.test(contactNo)) {
@@ -299,13 +299,13 @@ function checkInputContactNo() {
 }
 
 
-/*---------------------check address------------------------*/
+// check address
 $('#inputAddress').on('keyup', function () {
     checkInputAddress();
 })
 
 
-/*---------------function for check address validation----------------*/
+// function for check address validation
 function checkInputAddress() {
     var address = $('#inputAddress').val();
     if (regAddress.test(address)) {
@@ -317,13 +317,13 @@ function checkInputAddress() {
     }
 }
 
-/*---------------------check email----------------------*/
+// check email
 $('#inputEmail').on('keyup', function () {
     checkInputEmail();
 })
 
 
-/*---------------------function for check email validation-----------*/
+// function for check email validation
 function checkInputEmail() {
     var email = $('#inputEmail').val();
     if (regEmail.test(email)) {
@@ -335,13 +335,13 @@ function checkInputEmail() {
     }
 }
 
-/*-----------------check Driving Licence-------------*/
+// check Driving Licence
 $('#inputDrivingLicence').on('keyup', function () {
     checkInputDrivingLicence();
 })
 
 
-/*--------------function for check Driving Licence validation----------------*/
+// function for check Driving Licence validation
 function checkInputDrivingLicence() {
     var drivingLicence = $('#inputDrivingLicence').val();
     if (regDrivingLicenceNo.test(drivingLicence)) {
@@ -353,13 +353,13 @@ function checkInputDrivingLicence() {
     }
 }
 
-/*------------------check nic-----------------*/
+// check nic
 $('#inputNIC').on('keyup', function () {
     checkInputNIC();
 })
 
 
-/*----------------function for check nic validation-----------------*/
+// function for check nic validation
 function checkInputNIC() {
     var nicNo = $('#inputNIC').val();
     if (regNicNo.test(nicNo)) {
@@ -371,13 +371,13 @@ function checkInputNIC() {
     }
 }
 
-/*-----------------check username-------------------*/
+// check username
 $('#inputUserName').on('keyup', function () {
     checkInputUserName();
 })
 
 
-/*---------------------function for check username validation-------------------*/
+// function for check username validation
 function checkInputUserName() {
     var userName = $('#inputUserName').val();
     if (regLoginUsername.test(userName)) {
@@ -390,13 +390,13 @@ function checkInputUserName() {
 }
 
 
-/*-----------check password-----------------*/
+// check password
 $('#inputPassword').on('keyup', function () {
     checkInputPassword();
 })
 
 
-/*------------------function for check password validation-----------------*/
+// function for check password validation
 function checkInputPassword() {
     var password = $('#inputPassword').val();
     if (regLoginPassword.test(password)) {
@@ -408,7 +408,7 @@ function checkInputPassword() {
     }
 }
 
-/*-----------------add customer-------------------*/
+// add customer
 function addCustomer() {
 
     let id = $('#txtId').val();
@@ -463,7 +463,7 @@ function addCustomer() {
 }
 
 
-/*------------upload customer images------------------*/
+// upload customer images
 function uploadCustomerImages(id) {
     var fileObjectNic1 = $('#inputfile1')[0].files[0];
     var fileNameNic1 = id + "-nicfront-" + $('#inputfile1')[0].files[0].name;
@@ -494,7 +494,7 @@ function uploadCustomerImages(id) {
 }
 
 
-/*-----------------clear sign up field-------------------*/
+// clear sign up field
 function clearSignupTextFields() {
     $('#txtId').val("");
     $('#inputUserType').val("-Select User Type-");
@@ -521,8 +521,8 @@ function clearSignupTextFields() {
 }
 
 
-/*----------------ADMIN---------------------*/
-/*add admin*/
+//----------------ADMIN---------------------
+// add admin
 function addAdmin() {
     let id = $('#txtId').val();
     let name = $('#inputName').val();
@@ -569,7 +569,7 @@ function addAdmin() {
     })
 }
 
-/*--------------------create account------------------*/
+// create account
 $('#btnCreate').click(function () {
     if ($('#inputUserType').val() === "Customer") {
         if ($('#inputName').val() != "") {
@@ -672,13 +672,13 @@ $('#btnCreate').click(function () {
 });
 
 
-/*-----------------btn clear-----------------------*/
+// btn clear
 $('#btnClear').click(function () {
     clearSignupTextFields();
 });
 
 
-/*-----------btn login-------------------------*/
+// btn login
 $('#btnLogin').click(function () {
     var userType = $('#cmbUserType').find('option:selected').text();
 
@@ -689,7 +689,7 @@ $('#btnLogin').click(function () {
 
 });
 
-/*------------function for get login user-------------*/
+// function for get login user
 function loginUser() {
     var username = $('#txtUserName').val();
     var password = $('#txtPassword').val();
@@ -706,7 +706,7 @@ function loginUser() {
     }
 }
 
-/*--------------------------save logins to database and load pages------------------*/
+// save logins to database and load pages
 function loginSave(userType, username, password) {
     let logId = $('#txtLogId').val();
     console.log(logId);
@@ -736,7 +736,7 @@ function loginSave(userType, username, password) {
 }
 
 
-/*-------------------------function for generate id-------------------*/
+// function for generate id
 $(function () {
     getNewLoginId();
 });
@@ -752,7 +752,7 @@ function getNewLoginId() {
 }
 
 
-/*------------------search admin----------------------------*/
+// search admin
 function searchAdmin(userType, username, password) {
     $.ajax({
         url: baseUrl + "api/v1/admin/" + username + "/" + password,
@@ -770,7 +770,7 @@ function searchAdmin(userType, username, password) {
 }
 
 
-/*-----------------------search customer----------------------*/
+// search customer
 function searchCustomer(userType, username, password) {
     $.ajax({
         url: baseUrl + "api/v1/customer/" + username + "/" + password,
@@ -788,7 +788,7 @@ function searchCustomer(userType, username, password) {
 }
 
 
-/*-----------------search driver--------------------*/
+// search driver
 function searchDriver(userType, username, password) {
     $.ajax({
         url: baseUrl + "api/v1/driver/" + username + "/" + password,

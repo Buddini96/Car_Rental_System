@@ -17,7 +17,7 @@ function loadCarDetails() {
 
                     let path = car.frontView
                     console.log(path);
-                    let img = path.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+                    let img = path.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
                     console.log(img);
                     let imgSrc = "assets/savedImages//Cars//" + img;
 
@@ -48,7 +48,7 @@ function loadCarDetails() {
                     $('#divGeneral').append(div);
                 } else if (car.type === "Premium") {
                     let path = car.frontView;
-                    let img = path.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+                    let img = path.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
                     let imgSrc = "assets/savedImages//Cars//" + img;
 
                     let div = `<div class="col" id="card10" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -79,7 +79,7 @@ function loadCarDetails() {
                     $('#divPremium').append(div);
                 } else if (car.type === "Luxury") {
                     let path = car.frontView;
-                    let img = path.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+                    let img = path.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
                     let imgSrc = "assets/savedImages//Cars//" + img;
 
                     let div = `<div class="col" id="card10" data-aos="fade-up" data-aos-anchor-placement="top-bottom"

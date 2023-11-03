@@ -1,6 +1,6 @@
 getLastLogUser();
 
-/*----------------function for get last log user-------------------------*/
+// function for get last log user
 function getLastLogUser() {
     $.ajax({
         url: "http://localhost:8080/Back_End_war/api/v1/login/getLastLogin",
@@ -14,7 +14,7 @@ function getLastLogUser() {
 }
 
 
-/*--------------function for get driver data------------------------*/
+// function for get driver data
 function getAllDriverData(username, password) {
     $.ajax({
         url: "http://localhost:8080/Back_End_war/api/v1/driver/set/" + username + "/" + password,
@@ -28,7 +28,7 @@ function getAllDriverData(username, password) {
 }
 
 
-/*-----------load data into driver table--------------------*/
+// load data into driver table
 function loadDriverSchedule(licenceNo){
     $('#bookingScheduleTable').empty();
     let status = "Accepted";
@@ -43,3 +43,4 @@ function loadDriverSchedule(licenceNo){
         }
     })
 }
+

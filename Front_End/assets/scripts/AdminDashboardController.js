@@ -1070,16 +1070,16 @@ function searchAndLoadCustomerImgs(id) {
             let customer = res.data;
 
             let nicFrontPath = customer.nicFrontImg;
-            let nicFrontImg = nicFrontPath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\customers")[1];
+            let nicFrontImg = nicFrontPath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Customers")[1];
             let nicFrontImgSrc = "assets/savedImages//Customers//" + nicFrontImg;
             console.log(nicFrontImgSrc);
 
             let nicBackPath = customer.nicBackImg;
-            let nicBackImg = nicBackPath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\customers")[1];
+            let nicBackImg = nicBackPath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Customers")[1];
             let nicBackImgSrc = "assets/savedImages//Customers//" + nicBackImg;
 
             let licencePath = customer.licenceImg;
-            let licenceImg = licencePath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\customers")[1];
+            let licenceImg = licencePath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Customers")[1];
             let licenceImgSrc = "assets/savedImages//Customers//" + licenceImg;
 
 

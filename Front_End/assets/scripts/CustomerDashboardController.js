@@ -419,19 +419,19 @@ function setCarDataToFields(car) {
 
 
     let frontViewPath = car.frontView;
-    let frontViewImg = frontViewPath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+    let frontViewImg = frontViewPath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
     let FrontViewImgSrc = "assets/savedImages//Cars//" + frontViewImg;
 
     let backViewPath = car.backView;
-    let backViewImg = backViewPath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+    let backViewImg = backViewPath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
     let backViewImgSrc = "assets/savedImages//Cars//" + backViewImg;
 
     let sideViewPath = car.sideView;
-    let sideViewImg = sideViewPath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+    let sideViewImg = sideViewPath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
     let sideViewImgSrc = "assets/savedImages///Cars//" + sideViewImg;
 
     let interiorViewPath = car.internalView;
-    let interiorViewImg = interiorViewPath.split("D:\\IJSE\\GDSE\\2nd semester\\Advanced API Development\\Course Work\\Car_Rental_System\\Front_End\\assets\\savedImages\\cars")[1];
+    let interiorViewImg = interiorViewPath.split("D:\\IJSE\\des\\final\\Easy_Car_Rental_System\\Easy_Car_Rental_System\\Front_End\\assets\\savedImages\\Cars")[1];
     let interiorViewImgSrc = "assets/savedImages///Cars//" + interiorViewImg;
 
     let fvImg = `<img src=${FrontViewImgSrc} alt="NIC Front" style="background-size: cover;width: 100%;height: 100%">`;
